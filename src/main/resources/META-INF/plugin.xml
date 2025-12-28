@@ -1,0 +1,16 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.haitokirosi.jbsolana</id>
+    <name>JBSolana Run Configuration</name>
+    <vendor url="https://github.com/HaitoKirosi">HaitoKirosi</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <configurationType implementation="com.github.haitokirosi.jbsolana.runconfig.model.SolanaConfigurationType"/>
+        <runConfigurationProducer implementation="com.github.haitokirosi.jbsolana.runconfig.run.SolanaRunConfigurationProducer"/>
+        <stepsBeforeRunProvider implementation="com.github.haitokirosi.jbsolana.runconfig.build.SolanaBuildTaskProvider"/>
+    </extensions>
+</idea-plugin>
