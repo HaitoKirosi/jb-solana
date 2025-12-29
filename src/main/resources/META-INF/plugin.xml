@@ -12,5 +12,6 @@
         <configurationType implementation="com.github.haitokirosi.jbsolana.runconfig.model.SolanaConfigurationType"/>
         <runConfigurationProducer implementation="com.github.haitokirosi.jbsolana.runconfig.run.SolanaRunConfigurationProducer"/>
         <stepsBeforeRunProvider implementation="com.github.haitokirosi.jbsolana.runconfig.task.SolanaBuildTaskProvider"/>
+        <statusBarWidgetFactory implementation="com.github.haitokirosi.jbsolana.ui.statusbar.SolanaStatusBarWidgetFactory"/>
     </extensions>
 </idea-plugin>
