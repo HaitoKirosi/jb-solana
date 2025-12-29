@@ -1,6 +1,6 @@
 package com.github.haitokirosi.jbsolana.runconfig.run
 
-import com.github.haitokirosi.jbsolana.runconfig.build.SolanaBuildTask
+import com.github.haitokirosi.jbsolana.runconfig.task.SolanaBuildTask
 import com.github.haitokirosi.jbsolana.runconfig.model.ExecutableType
 import com.github.haitokirosi.jbsolana.runconfig.model.SolanaRunConfigurationOptions
 import com.github.haitokirosi.jbsolana.runconfig.ui.SolanaSettingsEditor

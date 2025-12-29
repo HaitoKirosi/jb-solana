@@ -16,16 +16,19 @@ class SolanaRunProfileState(
 ) : CommandLineState(environment) {
 
     override fun startProcess(): ProcessHandler {
+        val commandLine = createCommandLine()
+        return KillableColoredProcessHandler(commandLine)
+    }
+
+    internal fun createCommandLine(): GeneralCommandLine {
         val workingDir = resolveWorkingDirectory()
-        val commandLine = GeneralCommandLine().apply {
+        return GeneralCommandLine().apply {
             exePath = resolveExecutablePath(workingDir)
             if (workingDir != null) {
                 setWorkDirectory(workingDir)
             }
             addParameters(resolveProgramArguments())
         }
-
-        return KillableColoredProcessHandler(commandLine)
     }
 
     private fun resolveWorkingDirectory(): String? {
